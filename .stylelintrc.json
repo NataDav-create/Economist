@@ -1,0 +1,24 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-css-modules", "stylelint-config-recess-order"],
+  "rules": {
+    "color-named": "never",
+    "font-family-name-quotes": "always-where-required",
+    "font-weight-notation": "named-where-possible",
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "string-quotes": "single",
+    "unit-disallowed-list": [],
+    "max-empty-lines": 1,
+    "no-descending-specificity": true,
+    "no-duplicate-selectors": true,
+    "font-family-no-missing-generic-family-keyword": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": ["/^[A-Z_a-z0-9]+$/"]
+      }
+    ]
+  },
+  "ignoreFiles": ["node_modules/*", "src/assets/**"],
+  "defaultSeverity": "error"
+}

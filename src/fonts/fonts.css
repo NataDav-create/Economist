@@ -1,0 +1,346 @@
+@font-face {
+  font-family: EconSans;
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('./EconSans/econsansbol.woff2') format('woff2'),
+    url('./EconSans/econsansbol.woff') format('woff'),
+    url('./EconSans/econsansbol.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: italic;
+  font-weight: bold;
+  src:
+    url('./EconSans/econsansbolita.woff2') format('woff2'),
+    url('./EconSans/econsansbolita.woff') format('woff'),
+    url('./EconSans/econsansbolita.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('./EconSans/econsanslig.woff2') format('woff2'),
+    url('./EconSans/econsanslig.woff') format('woff'),
+    url('./EconSans/econsanslig.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url('./EconSans/econsansligita.woff2') format('woff2'),
+    url('./EconSans/econsansligita.woff') format('woff'),
+    url('./EconSans/econsansligita.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('./EconSans/econsansmed.woff2') format('woff2'),
+    url('./EconSans/econsansmed.woff') format('woff'),
+    url('./EconSans/econsansmed.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url('./EconSans/econsansmedita.woff2') format('woff2'),
+    url('./EconSans/econsansmedita.woff') format('woff'),
+    url('./EconSans/econsansmedita.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('./EconSans/econsansreg.eot'),
+    url('./EconSans/econsansreg.woff2') format('woff2'),
+    url('./EconSans/econsansreg.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('./EconSans/econsansregita.woff2') format('woff2'),
+    url('./EconSans/econsansregita.woff') format('woff'),
+    url('./EconSans/econsansregita.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('./EconSans/econsansxbol.woff2') format('woff2'),
+    url('./EconSans/econsansxbol.woff') format('woff'),
+    url('./EconSans/econsansxbol.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSans;
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url('./EconSans/econsansxbolita.woff2') format('woff2'),
+    url('./EconSans/econsansxbolita.woff') format('woff'),
+    url('./EconSans/econsansxbolita.eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('./MiloTE/MiloPro-Bold.ttf') format('truetype'),
+    url('./MiloTE/MiloPro-Bold.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('./MiloTE/MiloTE-Medi.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-Medi.woff') format('woff'),
+    url('./MiloTE/MiloTE-Medi.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-Medi.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url('./MiloTE/MiloTE-MediIta.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-MediIta.woff') format('woff'),
+    url('./MiloTE/MiloTE-MediIta.eot') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('./MiloTE/MiloTE-Ita.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-Ita.woff') format('woff'),
+    url('./MiloTE/MiloTE-Ita.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-Ita.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: italic;
+  font-weight: bold;
+  src:
+    url('./MiloTE/MiloTE-BoldIta.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-BoldIta.woff') format('woff'),
+    url('./MiloTE/MiloTE-BoldIta.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-BoldIta.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('./MiloTE/MiloTE-Bold.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-Bold.woff') format('woff'),
+    url('./MiloTE/MiloTE-Bold.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-Bold.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('./MiloTE/MiloTE-Text.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-Text.woff') format('woff'),
+    url('./MiloTE/MiloTE-Text.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-Text.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('./MiloTE/MiloTE-Text.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-Text.woff') format('woff'),
+    url('./MiloTE/MiloTE-TextIta.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-TextIta.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('./MiloTE/MiloTE-Xbold.woff2') format('woff2'),
+    url('./MiloTE/MiloTE-Xbold.woff') format('woff'),
+    url('./MiloTE/MiloTE-Xbold.ttf') format('truetype'),
+    url('./MiloTE/MiloTE-Xbold.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MiloTE;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('./MiloTE/MiloTE.woff2') format('woff2'),
+    url('./MiloTE/MiloTE.woff') format('woff'),
+    url('./MiloTE/MiloTE.ttf') format('truetype'),
+    url('./MiloTE/MiloTE.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('./EconSansOS/woff2/EconSansOSLig.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSLig.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSLig.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSLig.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url('./EconSansOS/woff2/EconSansOSLigIta.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSLigIta.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSLigIta.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSLigIta.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('./EconSansOS/woff2/EconSansOSReg.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSReg.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSReg.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSReg.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('./EconSansOS/woff2/EconSansOSRegIta.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSRegIta.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSRegIta.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSRegIta.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('./EconSansOS/woff2/EconSansOSMed.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSMed.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSMed.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSMed.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url('./EconSansOS/woff2/EconSansOSMedIta.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSMedIta.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSMedIta.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSMedIta.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('./EconSansOS/woff2/EconSansOSBol.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSBol.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSBol.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSBol.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: italic;
+  font-weight: bold;
+  src:
+    url('./EconSansOS/woff2/EconSansOSBolIta.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSBolIta.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSBolIta.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSBolIta.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('./EconSansOS/woff2/EconSansOSXBol.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSXBol.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSXBol.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSXBol.otf') format('otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EconSansOS;
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url('./EconSansOS/woff2/EconSansOSXBolIta.woff2') format('woff2'),
+    url('./EconSansOS/woff/EconSansOSXBolIta.woff') format('woff'),
+    url('./EconSansOS/ttf/EconSansOSXBolIta.ttf') format('truetype'),
+    url('./EconSansOS/otf/EconSansOSXBolIta.otf') format('otf');
+  font-display: swap;
+}

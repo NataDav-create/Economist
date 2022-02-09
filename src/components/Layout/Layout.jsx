@@ -1,12 +1,13 @@
 import ScrollDepth from '@economist/fabric-components/utility/ScrollDepthTracker/ScrollDepth';
 import UtilWebVitals from '@economist/fabric-components/utility/utilwebvitals/UtilWebVitals';
 import React, { useEffect } from 'react';
-
+import HeadImpact from '@economist/fabric-components/header/headimpact/HeadImpact';
+import HeadAdv from '@economist/fabric-components/header/headadv/HeadAdv';
+// import Hero from '../Hero';
 import { appendAdditionalScripts } from '../../utils/utils/cookiesConsent';
 import { PreloadStatic } from '../PreloadStatic';
 import { Seo } from '../Seo';
 import styles from './Layout.styles';
-
 import '../../styles/normalize.css';
 import '../../fonts/fonts.css';
 
@@ -33,11 +34,16 @@ const Layout = ({ children, title, description, image }) => {
     <>
       <UtilWebVitals />
       <ScrollDepth />
-      <Seo title={title} description={description} image={image} />
-      <PreloadStatic />
+      <Seo title={title} description={description} image={image} /> <PreloadStatic />
       <div css={styles}>
-        <main>{children}</main>
-      </div>
+        <div className="container">
+          <HeadImpact />
+        </div>{' '}
+        <div className="headadv-container">
+          <HeadAdv />
+        </div>{' '}
+        <main> {children} </main>{' '}
+      </div>{' '}
     </>
   );
 };

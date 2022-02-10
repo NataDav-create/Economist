@@ -7,6 +7,7 @@ import HeadAdv from '@economist/fabric-components/header/headadv/HeadAdv';
 import { appendAdditionalScripts } from '../../utils/utils/cookiesConsent';
 import { PreloadStatic } from '../PreloadStatic';
 import { Seo } from '../Seo';
+import Logo from '../../../public/images/logo-spons.png';
 import styles from './Layout.styles';
 import '../../styles/normalize.css';
 import '../../fonts/fonts.css';
@@ -30,6 +31,14 @@ const Layout = ({ children, title, description, image }) => {
     };
   }, []);
 
+  const sponsorsList = [
+    {
+      sponsorLogo: Logo,
+      sponsorName: 'World Gold Council',
+      sponsorLink: 'https://www.economist.com/',
+    },
+  ];
+
   return (
     <>
       <UtilWebVitals />
@@ -40,7 +49,7 @@ const Layout = ({ children, title, description, image }) => {
           <HeadImpact />
         </div>{' '}
         <div className="headadv-container">
-          <HeadAdv />
+          <HeadAdv sponsors={sponsorsList} sponsoredText="" />
         </div>{' '}
         <main> {children} </main>{' '}
       </div>{' '}

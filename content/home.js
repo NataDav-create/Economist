@@ -5,12 +5,18 @@ module.exports = {
     image: 'ADD_YOUR_IMAGES_PATH',
   },
   hero: {
-    backgroundImage: '/images/HomePage/HomeBanner.png', // this is an example how to add images, don't forget to delete it
+    backgroundImage: '/images/homePage/mainBg.png',
+    logo: './images/homePage/logo.png',
     mobileBackgroundImage: '',
-    title: 'Title',
+    title: `Gold Demands <br/> 2022`,
     subtitle: 'Subtitle',
   },
-  text: {
-    first: `First text`,
+  common: {
+    arrowDown: '/images/common/arrowDown.png',
+  },
+  body: {
+    text: {
+      first: `First text`,
+    },
   },
 };

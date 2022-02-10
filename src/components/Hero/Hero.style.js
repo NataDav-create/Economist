@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import colors from '../../styles/colors';
 import mainBg from '../../../public/images/main-bg.png';
+import { Lexia } from '../../styles/fonts';
 
 const styles = () => css`
   background-color: ${colors.bgWhite};
@@ -35,6 +36,7 @@ const styles = () => css`
     padding: 0;
     margin: 0 0 7px;
     color: ${colors.gold};
+    ${Lexia};
     font-size: 42px;
     line-height: 56px;
     font-style: italic;

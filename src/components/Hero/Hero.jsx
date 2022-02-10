@@ -13,12 +13,12 @@ const Hero = () => (
         <div className="content-text">
           <h1 className="content-title">Gold Demand Trends</h1>
           <p className="content-secondTitle">02 2021</p>
-          <MainButton />
+          <MainButton className="main-btn" styleBg={'primary'} />
         </div>
       </div>
       <div className="bg-inner"></div>
     </div>
   </div>
-)
+);
 
 export default Hero;

@@ -20,9 +20,5 @@ export const BasicFontForEconomistComponentsQ = css `
 
 export const BasicFontForEconomistComponents = `'EconSansOS', sans-serif`;
 
-export const Lexia = `font-family: 'lexia', sans-serif;`
-
-export const Univers = `font-family: 'univers', sans-serif;`
-
 const fontBaseSize = 16;
 export const p2r = (v) => `${v / fontBaseSize}rem`;

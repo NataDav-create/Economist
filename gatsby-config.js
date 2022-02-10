@@ -10,7 +10,8 @@ module.exports = {
     url: siteConfig.url,
     homePage: siteConfig.homePage,
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static`,
@@ -33,7 +34,8 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          runtimeCaching: [{
+          runtimeCaching: [
+            {
               urlPattern: /(\.js$|\.css$|[^:]static\/)/,
               handler: 'CacheFirst',
             },
@@ -61,7 +63,7 @@ module.exports = {
         id: `GTM-MNPBR9J`,
         includeInDevelopment: false,
         defaultDataLayer: {
-          platform: 'gatsby'
+          platform: 'gatsby',
         },
       },
     },

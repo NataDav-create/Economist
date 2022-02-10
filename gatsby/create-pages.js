@@ -30,8 +30,13 @@ const createPages = async ({ actions, graphql }) => {
               title
               subtitle
             }
-            text {
-              first
+            common {
+              arrowDown
+            }
+            body {
+              text {
+                first
+              }
             }
           }
         }

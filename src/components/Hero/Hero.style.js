@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
-import colors from '../../styles/colors';
-import mainBg from '../../../public/images/main-bg.png';
-import { Lexia } from '../../styles/fonts';
 
-const styles = () => css`
+import colors from '../../styles/colors';
+import { p2r, SecondaryProps } from '../../styles/fonts';
+
+const styles = (image) => css`
   background-color: ${colors.bgWhite};
   width: 100%;
   height: 100%;
@@ -11,17 +11,19 @@ const styles = () => css`
 
   .container {
     max-width: 1440px;
-    padding: 0 32px;
+    padding: 0 ${p2r(32)};
     margin: 0 auto;
   }
 
   .content-inner {
     display: flex;
     justify-content: center;
-    padding: 52px 0 0;
+    padding: ${p2r(52)} 0 0;
   }
+
   .social-inner {
-    margin-right: 80px;
+    margin-right: ${p2r(80)};
+
     div {
       border: none;
     }
@@ -31,26 +33,21 @@ const styles = () => css`
     width: 800px;
   }
 
-  .content-title,
-  .content-secondTitle {
+  .content-title {
     padding: 0;
-    margin: 0 0 7px;
+    margin: 0 0 ${p2r(7)};
     color: ${colors.gold};
-    ${Lexia};
-    font-size: 42px;
-    line-height: 56px;
+    ${SecondaryProps};
+    font-size: ${p2r(42)};
+    line-height: ${p2r(56)};
     font-style: italic;
     font-weight: 500;
   }
 
-  .content-secondTitle {
-    margin: 0;
-  }
-
   .bg-inner {
     width: 100%;
-    min-height: 450px;
-    background-image: url(${mainBg});
+    min-height: ${p2r(450)};
+    background-image: url(${image});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

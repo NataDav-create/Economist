@@ -1,24 +1,29 @@
-import React from 'react';
 import UtilSocShare from '@economist/fabric-components/utility/utilsocshare/UtilSocShare';
-import { MainButton } from '../MainButton';
+import React from 'react';
+
+import { DownloadButton } from '../DownloadButton';
 import styles from './Hero.style';
 
-const Hero = () => (
-  <div css={styles}>
-    <div className="container">
-      <div className="content-inner">
-        <div className="social-inner">
-          <UtilSocShare />
+const Hero = ({ data, common }) => {
+  const { title, backgroundImage } = data;
+  const { arrowDown } = common;
+
+  return (
+    <div css={styles(backgroundImage)}>
+      <div className="container">
+        <div className="content-inner">
+          <div className="social-inner">
+            <UtilSocShare />
+          </div>
+          <div className="content-text">
+            <h1 className="content-title" dangerouslySetInnerHTML={{ __html: title }} />
+            <DownloadButton arrowDown={arrowDown} className="main-btn" styleBg={'primary'} />
+          </div>
         </div>
-        <div className="content-text">
-          <h1 className="content-title">Gold Demand Trends</h1>
-          <p className="content-secondTitle">02 2021</p>
-          <MainButton className="main-btn" styleBg={'primary'} />
-        </div>
+        <div className="bg-inner" />
       </div>
-      <div className="bg-inner"></div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Hero;

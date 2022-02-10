@@ -21,8 +21,10 @@ const useSiteMetadata = () => {
                 title
                 subtitle
               }
-              text {
-                first
+              body {
+                text {
+                  first
+                }
               }
             }
           }

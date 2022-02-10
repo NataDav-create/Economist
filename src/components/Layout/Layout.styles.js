@@ -1,12 +1,21 @@
-import { css } from '@emotion/react';
+import {
+  css
+} from '@emotion/react';
 
-const styles = css`
-  .headEconSec-wrapper {
-    & > div > header > div > div {
-      border-top: none;
-      border-bottom: none;
-    }
+const styles = css `
+.container {
+  div {
+    border-top: none;
+    border-bottom: none;
   }
+}
+
+.headEconSec-wrapper {
+  & > div > header > div > div {
+    border-top: none;
+    border-bottom: none;
+  }
+}
 `;
 
 export default styles;

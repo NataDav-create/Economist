@@ -8,5 +8,5 @@ module.exports = {
   name: 'Set full project name',
   shortName: 'Set short project name',
   description: '',
-  pathPrefix: '/example/master-impact/path',
+  pathPrefix: '/hubs/wgc',
 };

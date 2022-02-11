@@ -5,7 +5,7 @@ import colors from '../../styles/colors';
 import { p2r, SecondaryProps } from '../../styles/fonts';
 
 const styles = (styleBg, arrow) => css`
-  button {
+  .download-btn {
     position: relative;
     width: 299px;
     height: ${p2r(80)};

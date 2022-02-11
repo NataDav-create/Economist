@@ -4,5 +4,5 @@ export default {
   bgWhite: '#F9F8F5',
   gold: '#A39161',
   btnGrey: '#121212',
-  menuColor: '#0d0d0d',
+  menuColor: '#0D0D0D',
 };

@@ -4,7 +4,7 @@ import styles from './DownloadButton.styles';
 
 const DownloadButton = ({ styleBg, arrowDown }) => (
   <div css={styles(styleBg, arrowDown)} className="button-wrapper">
-    <button>download report</button>
+    <button className="download-btn">download report</button>
   </div>
 );
 

@@ -7,7 +7,7 @@ import { p2r, SecondaryProps } from '../../styles/fonts';
 const styles = (image) => css`
   background-color: ${colors.bgWhite};
   width: 100%;
-  height: 100%;
+  //height: 100%;
   overflow-x: hidden;
 
   @media (max-width: ${breakpoints.hugeMobile}px) {

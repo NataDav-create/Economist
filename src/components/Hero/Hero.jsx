@@ -1,6 +1,7 @@
 import UtilSocShare from '@economist/fabric-components/utility/utilsocshare/UtilSocShare';
 import React from 'react';
 
+import { colors } from '../../styles';
 import { DownloadButton } from '../DownloadButton';
 import styles from './Hero.style';
 
@@ -13,7 +14,7 @@ const Hero = ({ data, common }) => {
       <div className="container">
         <div className="content-inner">
           <div className="social-inner">
-            <UtilSocShare />
+            <UtilSocShare hoverBase={colors.gold} hoverIcon={colors.white} />
           </div>
           <div className="content-text">
             <h1 className="content-title" dangerouslySetInnerHTML={{ __html: title }} />
@@ -22,7 +23,7 @@ const Hero = ({ data, common }) => {
         </div>
         <div className="bg-inner" />
         <div className="social-mobile">
-          <UtilSocShare isVertical={false} hasBorder={false} />
+          <UtilSocShare isVertical={false} hasBorder={false} hoverBase={colors.gold} hoverIcon={colors.white} />
         </div>
       </div>
     </div>

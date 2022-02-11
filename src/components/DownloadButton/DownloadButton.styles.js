@@ -39,6 +39,14 @@ const styles = (styleBg, arrow) => css`
       background-size: cover;
     }
 
+    &:hover {
+      background: ${styleBg === 'primary' ? colors.white : colors.gold};
+      border-width: 2px;
+      border-style: solid;
+      border-color: ${styleBg === 'primary' ? colors.gold : ''};
+      color: ${styleBg === 'primary' ? colors.btnGrey : colors.white};
+    }
+
     @media (max-width: ${breakpoints.smallTablet}px) {
       max-width: 343px;
       display: flex;

@@ -21,6 +21,9 @@ const Hero = ({ data, common }) => {
           </div>
         </div>
         <div className="bg-inner" />
+        <div className="social-mobile">
+          <UtilSocShare isVertical={false} hasBorder={false} />
+        </div>
       </div>
     </div>
   );

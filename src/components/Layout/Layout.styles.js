@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 
 const styles = css`
   .container {
+    position: relative;
     div {
       border-top: none;
       border-bottom: none;

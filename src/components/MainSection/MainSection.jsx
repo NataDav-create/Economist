@@ -1,21 +1,57 @@
 import React from 'react';
 
+import { Article } from '../Article';
+import { DownloadButton } from '../DownloadButton';
+import NavigationBlock from '../NavigationBlock/NavigationBlock';
+import NavigationCard from '../NavigationBlock/NavigationCard';
+import { Paragraph } from '../Paragraph';
+import { QuoteBlock } from '../QuoteBlock';
 import styles from './MainSection.styles';
 
-const MainSection = () => (
+const MainSection = (props) => {
+  const { intro, article1, article2, article3, article4, quote1, common, navNext, navPrev } = props;
+  const { arrowWhite, prevArrow, nextArrow } = common;
+
+  return (
     <div css={styles}>
       <div className="container">
         <div className="article-wrapper">
-          <div className="menu-inner">
-sidebar
+          <div className="menu-inner">sidebar</div>
+          <div className="article-inner">
+            <Paragraph data={intro.text} marginSize={'big'} />
+            <Article data={article1.text} marginSize={'small'} title={article1.title} image={article1.articleImage} />
+            <Paragraph data={article1.conclusion} marginSize={'big'} />
+            <Article data={article2.text} marginSize={'small'} title={article2.title} image={article2.articleImage} />
+            <Article data={article3.text} marginSize={'small'} title={article3.title} image={article3.articleImage} />
+            <Paragraph data={article3.conclusion} marginSize={'big'} />
+            <Article data={article4.text} marginSize={'small'} title={article4.title} />
+            <QuoteBlock data={quote1.text} quoteTitle={quote1.authorTitle} image={quote1.quoteImg} />
+            <Paragraph data={article4.conclusion} marginSize={'big'} />
+            <DownloadButton arrowWhite={arrowWhite} className="main-btn" styleBg={'secondary'} />
+            <NavigationBlock>
+              <NavigationCard
+                data={navPrev.navigationImage}
+                title={navPrev.title}
+                text={navPrev.text}
+                styleText={'prev'}
+                direction={navPrev.direction}
+                prevImg={prevArrow}
+              />
+              <NavigationCard
+                data={navNext.navigationImage}
+                title={navNext.title}
+                text={navNext.text}
+                styleText={'next'}
+                direction={navNext.direction}
+                nextImg={nextArrow}
+              />
+            </NavigationBlock>
           </div>
-          <div className="article-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
-            Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
-            Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
-           t egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget</div>
         </div>
       </div>
+      <div className="final-block"></div>
     </div>
   );
+};
 
-export default  MainSection;
+export default MainSection;

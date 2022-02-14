@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import colors from '../../styles/colors';
 import { p2r } from '../../styles/fonts';
 
 const styles = () => css`
@@ -27,6 +28,13 @@ const styles = () => css`
   .article-inner {
     padding: 0 ${p2r(130)} 0 ${p2r(100)};
     width: 80%;
+  }
+
+  .final-block {
+    margin-top: -22%;
+    width: 100%;
+    height: ${p2r(338)};
+    background-color: ${colors.lightGold};
   }
 `;
 

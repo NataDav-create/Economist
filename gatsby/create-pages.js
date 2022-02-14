@@ -32,6 +32,51 @@ const createPages = async ({ actions, graphql }) => {
             }
             common {
               arrowDown
+              arrowWhite
+              prevArrow
+              nextArrow
+            }
+            introArticle {
+              text
+            }
+            articleOne {
+              title
+              text
+              articleImage
+              conclusion
+            }
+            articleTwo {
+              title
+              text
+              articleImage
+            }
+            articleThree {
+              title
+              text
+              articleImage
+              conclusion
+            }
+            articleFour {
+              title
+              text
+              conclusion
+            }
+            quoteOne {
+              text
+              authorTitle
+              quoteImg
+            }
+            navigationPrev {
+              navigationImage
+              title
+              text
+              direction
+            }
+            navigationNext {
+              navigationImage
+              title
+              text
+              direction
             }
             body {
               text {

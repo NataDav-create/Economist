@@ -71,12 +71,16 @@ const createPages = async ({ actions, graphql }) => {
               title
               text
               direction
+              prevMobile
+              mobileText
             }
             navigationNext {
               navigationImage
               title
               text
               direction
+              nextMobile
+              mobileText
             }
             body {
               text {

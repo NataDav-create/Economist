@@ -64,12 +64,16 @@ module.exports = {
     title: 'Gold mid-year outlook 2021',
     text: 'Lorem ipsum dolor sit amet, consec tetur adipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.',
     direction: 'Previous',
+    prevMobile: '/images/common/prevMobile.png',
+    mobileText: 'Prev',
   },
   navigationNext: {
     navigationImage: '/images/navigation/navigation2.jpg',
     title: 'Gold Market Commentary',
     text: 'Lorem ipsum dolor sit amet, consec tetur adipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.',
     direction: 'Next',
+    nextMobile: '/images/common/nextMobile.png',
+    mobileText: 'Next',
   },
   body: {
     text: {

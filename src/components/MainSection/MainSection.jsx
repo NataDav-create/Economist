@@ -15,7 +15,7 @@ const MainSection = (props) => {
   return (
     <div css={styles}>
       <div className="container">
-        <div className="article-wrapper">
+        <div className="articles-wrapper">
           <div className="menu-inner">sidebar</div>
           <div className="article-inner">
             <Paragraph data={intro.text} marginSize={'big'} />
@@ -36,6 +36,8 @@ const MainSection = (props) => {
                 styleText={'prev'}
                 direction={navPrev.direction}
                 prevImg={prevArrow}
+                prevMob={navPrev.prevMobile}
+                mobText={navPrev.mobileText}
               />
               <NavigationCard
                 data={navNext.navigationImage}
@@ -44,6 +46,8 @@ const MainSection = (props) => {
                 styleText={'next'}
                 direction={navNext.direction}
                 nextImg={nextArrow}
+                nextMob={navNext.nextMobile}
+                mobText={navNext.mobileText}
               />
             </NavigationBlock>
           </div>

@@ -1,25 +1,21 @@
 import { css } from '@emotion/react';
 
-import { colors } from '../../../styles';
-import { p2r, SecondaryProps } from '../../../styles/fonts';
+import { belowHugeMobile } from '../../../styles';
+import { p2r, Secondary } from '../../../styles/fonts';
 
-const styles = ({
-  width = '100%',
-  maxWidth,
-  fontSize = 48,
-  lineHeight = 50,
-  fontWeight = 'bold',
-  color = colors.black,
-}) => css`
-  width: ${width};
-  max-width: ${maxWidth};
-  margin: 0;
-  font-size: ${p2r(fontSize)};
-  font-weight: ${fontWeight};
-  line-height: ${p2r(lineHeight)};
-  color: ${color};
+const styles = ({ width }) => css`
+  ${Secondary}
+  .text-header {
+    width: ${width};
+    margin: 0;
+    font-size: ${p2r(36)};
+    font-weight: normal;
+    line-height: ${p2r(36)};
 
-  ${SecondaryProps}
+    ${belowHugeMobile(`
+      width: 100%;
+    `)}
+  }
 `;
 
 export default styles;

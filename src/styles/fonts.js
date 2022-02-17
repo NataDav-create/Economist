@@ -22,3 +22,6 @@ export const BasicFontForEconomistComponents = `'EconSansOS', sans-serif`;
 
 const fontBaseSize = 16;
 export const p2r = (v) => `${v / fontBaseSize}rem`;
+
+export class primaryProps {
+}

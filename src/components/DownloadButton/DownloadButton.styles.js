@@ -4,7 +4,7 @@ import { breakpoints } from '../../styles';
 import colors from '../../styles/colors';
 import { p2r, SecondaryProps } from '../../styles/fonts';
 
-const styles = (styleBg, arrow) => css`
+const styles = (styleBg, arrow, arrowWhite) => css`
   .download-btn {
     position: relative;
     width: 299px;
@@ -34,7 +34,7 @@ const styles = (styleBg, arrow) => css`
       width: 40px;
       height: ${p2r(40)};
       content: '';
-      background-image: url(${arrow});
+      background-image: url(${styleBg === 'primary' ? arrow : arrowWhite});
       background-position: center;
       background-size: cover;
     }

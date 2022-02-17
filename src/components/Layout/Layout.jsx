@@ -5,7 +5,6 @@ import UtilWebVitals from '@economist/fabric-components/utility/utilwebvitals/Ut
 import React, { useEffect } from 'react';
 
 import { appendAdditionalScripts } from '../../utils/utils/cookiesConsent';
-// import { MobileMenuBtn } from '../MobileMenuBtn';
 import { PreloadStatic } from '../PreloadStatic';
 import { Seo } from '../Seo';
 import styles from './Layout.styles';
@@ -38,7 +37,6 @@ const Layout = ({ children, title, description, image }) => {
       <Seo title={title} description={description} image={image} /> <PreloadStatic />
       <div css={styles}>
         <div className="container">
-          {/* <MobileMenuBtn /> */}
           <HeadImpact />
         </div>
         <div className="headadv-container">

@@ -5,9 +5,6 @@ import colors from '../../styles/colors';
 import { p2r } from '../../styles/fonts';
 
 const styles = () => css`
-  position: relative;
-  overflow-x: hidden;
-
   .container {
     max-width: 1440px;
     padding: ${p2r(50)} ${p2r(32)} ${p2r(100)};
@@ -20,8 +17,10 @@ const styles = () => css`
 
   .articles-wrapper {
     display: flex;
-    justify-content: space-between;
-    padding: 0 ${p2r(140)} ${p2r(0)};
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    // padding: 0 ${p2r(140)} ${p2r(0)};
 
     @media (max-width: ${breakpoints.tablet}px) {
       padding: 0 ${p2r(60)} ${p2r(0)};
@@ -29,18 +28,6 @@ const styles = () => css`
 
     @media (max-width: ${breakpoints.smallTablet}px) {
       padding: 0;
-    }
-  }
-
-  .menu-inner {
-    //delete later
-    background-color: azure; //delete later
-    position: sticky; //delete later
-    width: 18%; //delete later
-    height: 100px; //delete later
-
-    @media (max-width: ${breakpoints.smallTablet}px) {
-      display: none;
     }
   }
 

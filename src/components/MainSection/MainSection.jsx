@@ -1,53 +1,73 @@
 import React from 'react';
 
-import { Article } from '../Article';
 import { DownloadButton } from '../DownloadButton';
 import NavigationBlock from '../NavigationBlock/NavigationBlock';
 import NavigationCard from '../NavigationBlock/NavigationCard';
 import { Paragraph } from '../Paragraph';
+import { ParagraphWrap } from '../ParagraphWrap';
 import { QuoteBlock } from '../QuoteBlock';
+import {SideMenu} from '../SideMenu';
 import styles from './MainSection.styles';
 
-const MainSection = (props) => {
-  const { intro, article1, article2, article3, article4, quote1, common, navNext, navPrev } = props;
+const MainSection = ({ contentData, common }) => {
+  const {
+    textOne,
+    textTwo,
+    textThree,
+    textFour,
+    textFive,
+    textSix,
+    textSeven,
+    textEight,
+    imageOne,
+    imageTwo,
+    imageThree,
+    imageSideMenu,
+    quoteOne,
+    navigationPrev,
+    navigationNext,
+    mobileBtnPrev,
+    mobileBtnNext,
+  } = contentData;
+
   const { arrowWhite, prevArrow, nextArrow } = common;
 
   return (
     <div css={styles}>
       <div className="container">
         <div className="articles-wrapper">
-          <div className="menu-inner">sidebar</div>
+          <SideMenu image={imageSideMenu.url} alt={imageSideMenu.alt} />
           <div className="article-inner">
-            <Paragraph data={intro.text} marginSize={'big'} />
-            <Article data={article1.text} marginSize={'small'} title={article1.title} image={article1.articleImage} />
-            <Paragraph data={article1.conclusion} marginSize={'big'} />
-            <Article data={article2.text} marginSize={'small'} title={article2.title} image={article2.articleImage} />
-            <Article data={article3.text} marginSize={'small'} title={article3.title} image={article3.articleImage} />
-            <Paragraph data={article3.conclusion} marginSize={'big'} />
-            <Article data={article4.text} marginSize={'small'} title={article4.title} />
-            <QuoteBlock data={quote1.text} quoteTitle={quote1.authorTitle} image={quote1.quoteImg} />
-            <Paragraph data={article4.conclusion} marginSize={'big'} />
+            <Paragraph data={textOne.text} marginSize={'big'} />
+            <ParagraphWrap data={textTwo.text} marginSize={'small'} title={textTwo.title} image={imageThree.url} />
+            <Paragraph data={textThree.text} marginSize={'big'} />
+            <ParagraphWrap data={textFour.text} marginSize={'small'} title={textFour.title} image={imageOne.url} />
+            <ParagraphWrap data={textFive.text} marginSize={'small'} title={textFive.title} image={imageTwo.url} />
+            <Paragraph data={textSix.text} marginSize={'big'} />
+            <ParagraphWrap data={textSeven.text} marginSize={'small'} title={textSeven.title} />
+            <QuoteBlock data={quoteOne.text} quoteTitle={quoteOne.authorTitle} image={quoteOne.quoteImg} />
+            <Paragraph data={textEight.text} marginSize={'big'} />
             <DownloadButton arrowWhite={arrowWhite} className="main-btn" styleBg={'secondary'} />
             <NavigationBlock>
               <NavigationCard
-                data={navPrev.navigationImage}
-                title={navPrev.title}
-                text={navPrev.text}
+                data={navigationPrev.navigationImage}
+                title={navigationPrev.title}
+                text={navigationPrev.text}
                 styleText={'prev'}
-                direction={navPrev.direction}
+                direction={navigationPrev.direction}
                 prevImg={prevArrow}
-                prevMob={navPrev.prevMobile}
-                mobText={navPrev.mobileText}
+                mobText={mobileBtnPrev.text}
+                mobImage={mobileBtnPrev.image}
               />
               <NavigationCard
-                data={navNext.navigationImage}
-                title={navNext.title}
-                text={navNext.text}
+                data={navigationNext.navigationImage}
+                title={navigationNext.title}
+                text={navigationNext.text}
                 styleText={'next'}
-                direction={navNext.direction}
+                direction={navigationNext.direction}
                 nextImg={nextArrow}
-                nextMob={navNext.nextMobile}
-                mobText={navNext.mobileText}
+                mobText={mobileBtnNext.text}
+                mobImage={mobileBtnNext.image}
               />
             </NavigationBlock>
           </div>

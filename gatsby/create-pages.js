@@ -30,57 +30,84 @@ const createPages = async ({ actions, graphql }) => {
               title
               subtitle
             }
+            main {
+              contentData {
+                textOne {
+                  text
+                }
+                textTwo {
+                  title
+                  text
+                }
+                textThree {
+                  text
+                }
+                textFour {
+                  title
+                  text
+                }
+                textFive {
+                  title
+                  text
+                }
+                textSix {
+                  text
+                }
+                textSeven {
+                  title
+                  text
+                }
+                textEight {
+                  text
+                }
+                imageOne {
+                  url
+                  alt
+                }
+                imageTwo {
+                  url
+                  alt
+                }
+                imageThree {
+                  url
+                  alt
+                }
+                imageSideMenu {
+                  url
+                  alt
+                }
+                quoteOne {
+                  text
+                  authorTitle
+                  quoteImg
+                }
+                navigationPrev {
+                  navigationImage
+                  title
+                  text
+                  direction
+                }
+                navigationNext {
+                  navigationImage
+                  title
+                  text
+                  direction
+                }
+                mobileBtnPrev {
+                  text
+                  image
+                }
+                mobileBtnNext {
+                  text
+                  image
+                }
+              }
+            }
             common {
               arrowDown
               arrowWhite
               prevArrow
               nextArrow
-            }
-            introArticle {
-              text
-            }
-            articleOne {
-              title
-              text
-              articleImage
-              conclusion
-            }
-            articleTwo {
-              title
-              text
-              articleImage
-            }
-            articleThree {
-              title
-              text
-              articleImage
-              conclusion
-            }
-            articleFour {
-              title
-              text
-              conclusion
-            }
-            quoteOne {
-              text
-              authorTitle
-              quoteImg
-            }
-            navigationPrev {
-              navigationImage
-              title
-              text
-              direction
-              prevMobile
-              mobileText
-            }
-            navigationNext {
-              navigationImage
-              title
-              text
-              direction
-              nextMobile
-              mobileText
             }
             body {
               text {

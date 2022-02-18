@@ -4,21 +4,20 @@ import colors from '../../styles/colors';
 import { p2r, PrimaryProps } from '../../styles/fonts';
 
 const styles = () => css`
-  //position: sticky;
+  position: relative;
+  overflow: visible;
   margin-right: 100px;
   top: 20px;
   max-width: 320px;
   width: 100%;
-  height: 100%;
-  //max-height: calc(100vh - 64px);
 
   .menu-nav {
+    z-index: 100;
     position: sticky;
-    //position: relative;
+    top: 20px;
     padding: ${p2r(22)} ${p2r(22)} ${p2r(80)};
     background-color: ${colors.beige};
     border-radius: ${p2r(32)};
-    max-height: calc(100vh - 64px);
   }
 
   .menu-top {

@@ -1,6 +1,9 @@
 import { css } from '@emotion/react';
 
 const styles = css`
+  main {
+    overflow: visible;
+  }
   .container {
     position: relative;
 

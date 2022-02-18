@@ -26,81 +26,49 @@ const createPages = async ({ actions, graphql }) => {
             }
             hero {
               backgroundImage
+              logo
               mobileBackgroundImage
               title
               subtitle
             }
             main {
               contentData {
-                textOne {
-                  text
-                }
-                textTwo {
+                type
+                data {
                   title
                   text
-                }
-                textThree {
-                  text
-                }
-                textFour {
-                  title
-                  text
-                }
-                textFive {
-                  title
-                  text
-                }
-                textSix {
-                  text
-                }
-                textSeven {
-                  title
-                  text
-                }
-                textEight {
-                  text
-                }
-                imageOne {
                   url
                   alt
-                }
-                imageTwo {
-                  url
-                  alt
-                }
-                imageThree {
-                  url
-                  alt
-                }
-                imageSideMenu {
-                  url
-                  alt
-                }
-                quoteOne {
-                  text
                   authorTitle
                   quoteImg
+                  arrowDown
+                  arrowWh
+                  styleBack
                 }
-                navigationPrev {
-                  navigationImage
-                  title
-                  text
-                  direction
-                }
-                navigationNext {
-                  navigationImage
-                  title
-                  text
-                  direction
-                }
-                mobileBtnPrev {
-                  text
-                  image
-                }
-                mobileBtnNext {
-                  text
-                  image
-                }
+              }
+              navigationPrev {
+                navigationImage
+                title
+                text
+                direction
+              }
+              navigationNext {
+                navigationImage
+                title
+                text
+                direction
+              }
+              mobileBtnPrev {
+                text
+                image
+              }
+              mobileBtnNext {
+                text
+                image
+              }
+              imageSideMenu {
+                url
+                alt
               }
             }
             common {
@@ -108,11 +76,6 @@ const createPages = async ({ actions, graphql }) => {
               arrowWhite
               prevArrow
               nextArrow
-            }
-            body {
-              text {
-                first
-              }
             }
           }
         }

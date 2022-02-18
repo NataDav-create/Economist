@@ -2,9 +2,9 @@ import React from 'react';
 
 import styles from './ImageArticle.styles';
 
-const ImageArticle = ({ image, titleImg }) => (
-  <div css={styles(image)}>
-    <img className="image-article" src={image} alt={titleImg} />
+const ImageArticle = ({ data }) => (
+  <div css={styles()}>
+    <img className="image-article" src={data.url} alt={data.alt} />
   </div>
 );
 

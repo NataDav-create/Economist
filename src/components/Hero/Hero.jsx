@@ -7,7 +7,6 @@ import styles from './Hero.style';
 
 const Hero = ({ data, common }) => {
   const { title, backgroundImage } = data;
-  const { arrowDown } = common;
 
   return (
     <div css={styles(backgroundImage)}>
@@ -18,7 +17,7 @@ const Hero = ({ data, common }) => {
           </div>
           <div className="content-text">
             <h1 className="content-title" dangerouslySetInnerHTML={{ __html: title }} />
-            <DownloadButton arrowDown={arrowDown} className="main-btn" styleBg={'primary'} />
+            <DownloadButton arrowDown={common.arrowDown} className="main-btn" styleBg={'primary'} />
           </div>
         </div>
         <div className="bg-inner" />

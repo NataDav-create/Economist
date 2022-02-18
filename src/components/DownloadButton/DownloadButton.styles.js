@@ -4,7 +4,7 @@ import { breakpoints } from '../../styles';
 import colors from '../../styles/colors';
 import { p2r, SecondaryProps } from '../../styles/fonts';
 
-const styles = (styleBg, arrow, arrowWhite) => css`
+const styles = (styleBack, styleBg, arrow, arrowWhite, arrowWh) => css`
   .download-btn {
     position: relative;
     width: 299px;
@@ -19,7 +19,7 @@ const styles = (styleBg, arrow, arrowWhite) => css`
     text-transform: uppercase;
     letter-spacing: ${p2r(0.36)};
     cursor: pointer;
-    background: ${styleBg === 'primary'
+    background: ${styleBg || styleBack === 'primary'
       ? 'linear-gradient(16deg, #bb9b66 0%, #c6aa71 48%, #e9d793 86%, #d9c184 100%)'
       : '#121212'};
     border: none;
@@ -34,7 +34,7 @@ const styles = (styleBg, arrow, arrowWhite) => css`
       width: 40px;
       height: ${p2r(40)};
       content: '';
-      background-image: url(${styleBg === 'primary' ? arrow : arrowWhite});
+      background-image: url(${styleBg || styleBack === 'primary' ? arrow : arrowWhite || arrowWh});
       background-position: center;
       background-size: cover;
     }

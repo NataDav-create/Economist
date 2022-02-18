@@ -1,36 +1,21 @@
 import React from 'react';
 
-import { DownloadButton } from '../DownloadButton';
+import componentIndex from '../componentIndex';
 import NavigationBlock from '../NavigationBlock/NavigationBlock';
 import NavigationCard from '../NavigationBlock/NavigationCard';
-import { Paragraph } from '../Paragraph';
-import { ParagraphWrap } from '../ParagraphWrap';
-import { QuoteBlock } from '../QuoteBlock';
-import {SideMenu} from '../SideMenu';
+import { SideMenu } from '../SideMenu';
 import styles from './MainSection.styles';
 
-const MainSection = ({ contentData, common }) => {
-  const {
-    textOne,
-    textTwo,
-    textThree,
-    textFour,
-    textFive,
-    textSix,
-    textSeven,
-    textEight,
-    imageOne,
-    imageTwo,
-    imageThree,
-    imageSideMenu,
-    quoteOne,
-    navigationPrev,
-    navigationNext,
-    mobileBtnPrev,
-    mobileBtnNext,
-  } = contentData;
-
-  const { arrowWhite, prevArrow, nextArrow } = common;
+const MainSection = ({
+  contentData,
+  common,
+  imageSideMenu,
+  navigationPrev,
+  navigationNext,
+  mobileBtnPrev,
+  mobileBtnNext,
+}) => {
+  const { prevArrow, nextArrow } = common;
 
   return (
     <div css={styles}>
@@ -38,16 +23,11 @@ const MainSection = ({ contentData, common }) => {
         <div className="articles-wrapper">
           <SideMenu image={imageSideMenu.url} alt={imageSideMenu.alt} />
           <div className="article-inner">
-            <Paragraph data={textOne.text} marginSize={'big'} />
-            <ParagraphWrap data={textTwo.text} marginSize={'small'} title={textTwo.title} image={imageThree.url} />
-            <Paragraph data={textThree.text} marginSize={'big'} />
-            <ParagraphWrap data={textFour.text} marginSize={'small'} title={textFour.title} image={imageOne.url} />
-            <ParagraphWrap data={textFive.text} marginSize={'small'} title={textFive.title} image={imageTwo.url} />
-            <Paragraph data={textSix.text} marginSize={'big'} />
-            <ParagraphWrap data={textSeven.text} marginSize={'small'} title={textSeven.title} />
-            <QuoteBlock data={quoteOne.text} quoteTitle={quoteOne.authorTitle} image={quoteOne.quoteImg} />
-            <Paragraph data={textEight.text} marginSize={'big'} />
-            <DownloadButton arrowWhite={arrowWhite} className="main-btn" styleBg={'secondary'} />
+            {contentData.map((item, index) => {
+              const Component = componentIndex[item.type];
+              return <Component data={item.data} key={`${item.type}-${index}`} />;
+            })}
+            {/* <DownloadButton arrowWhite={arrowWhite} className="main-btn" styleBg={'secondary'} /> */}
             <NavigationBlock>
               <NavigationCard
                 data={navigationPrev.navigationImage}
@@ -73,7 +53,6 @@ const MainSection = ({ contentData, common }) => {
           </div>
         </div>
       </div>
-      <div className="final-block"></div>
     </div>
   );
 };

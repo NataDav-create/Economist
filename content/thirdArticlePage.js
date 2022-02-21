@@ -8,7 +8,7 @@ module.exports = {
     backgroundImage: '/images/homePage/mainBg.png',
     logo: './images/homePage/logo.png',
     mobileBackgroundImage: '',
-    title: `Gold Demands <br/> 2022`,
+    title: `Gold Market Commentary`,
     subtitle: 'Subtitle',
   },
   main: {

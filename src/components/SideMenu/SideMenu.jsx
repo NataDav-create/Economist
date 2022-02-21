@@ -22,7 +22,7 @@ const SideMenu = ({ image, alt, menuData, futureMenuData }) => {
             </li>
           ))}
         </ul>
-        <div className="gold-divider"></div>
+        <div className={`gold-divider ${open ? '' : 'closed'}`}></div>
         <ul className={`menu-list-second ${open ? '' : 'closed'}`}>
           {futureMenuData.map((item, index) => (
             <li key={index} className="menu-item">

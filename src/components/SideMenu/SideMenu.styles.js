@@ -69,10 +69,16 @@ const styles = () => css`
     padding-top: ${p2r(64)};
     padding-left: 0;
     max-width: 320px;
-    height: 100%;
+    max-height: 100%;
+    transition: all 0.3s ease-in;
 
     &.closed {
-      display: none;
+      transform: scale(0);
+      padding-top: 0;
+      max-height: 0;
+      li {
+        display: none;
+      }
     }
   }
 
@@ -129,11 +135,16 @@ const styles = () => css`
   }
 
   .gold-divider {
+    display: block;
     margin-top: ${p2r(12)};
     margin-bottom: ${p2r(12)};
     height: 2px;
     width: 100%;
     background-color: ${colors.darkBeige};
+
+    &.closed {
+      display: none;
+    }
   }
 
   .menu-date {

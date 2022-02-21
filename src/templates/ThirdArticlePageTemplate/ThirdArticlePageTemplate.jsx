@@ -4,14 +4,14 @@ import { Hero } from '../../components/Hero';
 import { Layout } from '../../components/Layout';
 import { MainSection } from '../../components/MainSection';
 import { Wrapper } from '../../components/Wrapper';
-import styles from './HomePageTemplate.styles';
+import styles from './ThirdArticlePageTemplate.styles';
 
-const HomePageTemplate = ({ pageContext: { PageData, CommonInfo } }) => {
+const thirdArticlePage = ({ pageContext: { PageData, CommonInfo } }) => {
   const {
     hero,
     main: { contentData, imageSideMenu, navigationPrev, navigationNext, mobileBtnPrev, mobileBtnNext },
   } = PageData;
-  const { assets, menuData, futureMenuData } = CommonInfo;
+  const {menuData, assets, futureMenuData } = CommonInfo;
 
   return (
     <Layout title={PageData.seo.title} description={PageData.seo.description} image={PageData.seo.image}>
@@ -35,4 +35,4 @@ const HomePageTemplate = ({ pageContext: { PageData, CommonInfo } }) => {
   );
 };
 
-export default HomePageTemplate;
+export default thirdArticlePage;

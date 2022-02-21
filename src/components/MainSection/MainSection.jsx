@@ -8,26 +8,27 @@ import styles from './MainSection.styles';
 
 const MainSection = ({
   contentData,
-  common,
+  assets,
+  menuData,
+  futureMenuData,
   imageSideMenu,
   navigationPrev,
   navigationNext,
   mobileBtnPrev,
   mobileBtnNext,
 }) => {
-  const { prevArrow, nextArrow } = common;
+  const { prevArrow, nextArrow } = assets;
 
   return (
     <div css={styles}>
       <div className="container">
         <div className="articles-wrapper">
-          <SideMenu image={imageSideMenu.url} alt={imageSideMenu.alt} />
+          <SideMenu image={imageSideMenu.url} alt={imageSideMenu.alt} menuData={menuData} futureMenuData={futureMenuData} />
           <div className="article-inner">
             {contentData.map((item, index) => {
               const Component = componentIndex[item.type];
               return <Component data={item.data} key={`${item.type}-${index}`} />;
             })}
-            {/* <DownloadButton arrowWhite={arrowWhite} className="main-btn" styleBg={'secondary'} /> */}
             <NavigationBlock>
               <NavigationCard
                 data={navigationPrev.navigationImage}

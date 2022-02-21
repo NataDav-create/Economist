@@ -1,8 +1,6 @@
 'use strict';
 
 const siteConfig = require('./config.js');
-const secondArticlePage = require('./content/secondArticlePage');
-const thirdArticlePage = require('./content/thirdArticlePage');
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,

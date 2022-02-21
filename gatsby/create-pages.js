@@ -212,7 +212,7 @@ const createPages = async ({ actions, graphql }) => {
 
   createPage({
     path: '/gold-demand-trends/',
-    component: path.resolve('./src/templates/SecondArticlePageTemplate/SecondArticlePageTemplate.jsx'),
+    component: path.resolve('./src/templates/HomePageTemplate/HomePageTemplate.jsx'),
     context: {
       PageData: secondArticlePage,
       CommonInfo: common,
@@ -221,7 +221,7 @@ const createPages = async ({ actions, graphql }) => {
 
   createPage({
     path: '/gold-market-commentary/',
-    component: path.resolve('./src/templates/ThirdArticlePageTemplate/ThirdArticlePageTemplate.jsx'),
+    component: path.resolve('./src/templates/HomePageTemplate/HomePageTemplate.jsx'),
     context: {
       PageData: thirdArticlePage,
       CommonInfo: common,

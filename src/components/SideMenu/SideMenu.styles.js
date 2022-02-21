@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import colors from '../../styles/colors';
 import { p2r, PrimaryProps } from '../../styles/fonts';
 
-const styles = () => css`
+const styles = (open) => css`
   position: relative;
   overflow: visible;
   margin-right: 100px;
@@ -17,14 +17,9 @@ const styles = () => css`
     position: sticky;
     top: 20px;
     margin-bottom: 450px;
-    padding: ${p2r(22)} ${p2r(22)} ${p2r(80)};
-    background-color: ${colors.beige};
+    padding: ${open ? `${p2r(22)} ${p2r(22)} ${p2r(80)}` : `${p2r(22)} ${p2r(22)} ${p2r(0)}`};
+    background-color: ${open ? colors.beige : 'transparent'};
     border-radius: ${p2r(32)};
-
-    &.closed {
-      padding: ${p2r(22)} ${p2r(22)} ${p2r(0)};
-      background-color: transparent;
-    }
   }
 
   .menu-top {
@@ -39,6 +34,8 @@ const styles = () => css`
     height: ${p2r(64)};
     border-top-left-radius: ${p2r(32)};
     border-top-right-radius: ${p2r(32)};
+    border-bottom-left-radius: ${open ? 0 : `${p2r(32)}`};
+    border-bottom-right-radius: ${open ? 0 : `${p2r(32)}`};
     background-color: ${colors.darkBeige};
     text-align: left;
     text-transform: uppercase;
@@ -46,39 +43,27 @@ const styles = () => css`
     font-size: ${p2r(18)};
     font-weight: 400;
     color: ${colors.btnGrey};
-
-    &.closed {
-      border-radius: ${p2r(32)};
-    }
   }
 
   .menu-top-img {
     margin-left: auto;
     cursor: pointer;
     padding: 5px;
-
-    &.closed {
-      transform: scaleY(-1);
-    }
+    transform: ${open ? 'scale(1)' : 'scaleY(-1)'};
   }
 
   .menu-list, .menu-list-second {
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding-top: ${p2r(64)};
+    padding-top: ${open ? `${p2r(64)}` : 0};
     padding-left: 0;
     max-width: 320px;
-    max-height: 100%;
+    max-height: ${open ? '100%' : 0};
     transition: all 0.3s ease-in;
-
-    &.closed {
-      transform: scale(0);
-      padding-top: 0;
-      max-height: 0;
-      li {
-        display: none;
-      }
+    transform: ${open ? 'scale(1)' : 'scale(0)'};
+    li {
+      display: ${open ? 'block' : 'none'};
     }
   }
 
@@ -110,7 +95,7 @@ const styles = () => css`
 
   .menu-bottom {
     position: absolute;
-    display: flex;
+    display: ${open ? 'flex' : 'none'};
     justify-content: flex-start;
     align-items: center;
     bottom: 0;
@@ -124,10 +109,6 @@ const styles = () => css`
     border: none;
     transition: all 0.3s ease-in;
 
-    &.closed {
-      display: none;
-    }
-
     &:hover {
       background-color: ${colors.white};
       border: 2px solid ${colors.darkBeige};
@@ -135,16 +116,12 @@ const styles = () => css`
   }
 
   .gold-divider {
-    display: block;
+    display: ${open ? 'block' : 'none'};
     margin-top: ${p2r(12)};
     margin-bottom: ${p2r(12)};
     height: 2px;
     width: 100%;
     background-color: ${colors.darkBeige};
-
-    &.closed {
-      display: none;
-    }
   }
 
   .menu-date {

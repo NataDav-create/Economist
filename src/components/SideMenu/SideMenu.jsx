@@ -7,13 +7,13 @@ const SideMenu = ({ image, alt, menuData, futureMenuData }) => {
   const [open, setOpen] = useState(true);
 
   return (
-    <div css={styles}>
-      <nav className={`menu-nav ${open ? '' : 'closed'}`}>
-        <div className={`menu-top ${open ? '' : 'closed'}`}>
+    <div css={styles(open)}>
+      <nav className="menu-nav">
+        <div className="menu-top">
           Articles Index
-          <img className={`menu-top-img ${open ? '' : 'closed'}`} src={image} alt={alt} onClick={() => setOpen(!open)} />
+          <img className="menu-top-img" src={image} alt={alt} onClick={() => setOpen(!open)} />
         </div>
-        <ul className={`menu-list ${open ? '' : 'closed'}`}>
+        <ul className={`menu-list`}>
           {menuData.map((item, index) => (
             <li key={index} className="menu-item">
               <Link to={item.link} className="menu-link" activeClassName="active">
@@ -22,8 +22,8 @@ const SideMenu = ({ image, alt, menuData, futureMenuData }) => {
             </li>
           ))}
         </ul>
-        <div className={`gold-divider ${open ? '' : 'closed'}`}></div>
-        <ul className={`menu-list-second ${open ? '' : 'closed'}`}>
+        <div className="gold-divider"></div>
+        <ul className="menu-list-second">
           {futureMenuData.map((item, index) => (
             <li key={index} className="menu-item">
                 {item.futureTitle}
@@ -31,7 +31,7 @@ const SideMenu = ({ image, alt, menuData, futureMenuData }) => {
             </li>
           ))}
         </ul>
-        <button className={`menu-bottom ${open ? '' : 'closed'}`} onClick={() => setOpen(!open)}>
+        <button className="menu-bottom" onClick={() => setOpen(!open)}>
           <img className="menu-bottom-img" src={image} alt={alt} />
         </button>
       </nav>

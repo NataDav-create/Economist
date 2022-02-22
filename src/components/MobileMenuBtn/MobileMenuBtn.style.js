@@ -8,7 +8,7 @@ const styles = () => css`
   display: none;
   position: absolute;
   right: ${p2r(15)};
-  top: calc(50% - 10px);
+  top: 5%;
   z-index: 20;
   max-width: 70px;
   cursor: pointer;

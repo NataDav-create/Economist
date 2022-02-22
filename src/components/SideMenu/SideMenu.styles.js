@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import { breakpoints } from '../../styles';
 import colors from '../../styles/colors';
 import { p2r, PrimaryProps } from '../../styles/fonts';
 
@@ -11,6 +12,14 @@ const styles = (open) => css`
   max-width: 320px;
   width: 100%;
   max-height: calc(600vh - 64px);
+
+  @media (max-width: ${breakpoints.medium}px) {
+    margin-right: 70px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}px) {
+   display: none;
+  }
 
   .menu-nav {
     z-index: 100;

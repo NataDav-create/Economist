@@ -1,9 +1,16 @@
 import { css } from '@emotion/react';
 
-const styles = css`
-  main {
+import {breakpoints} from '../../styles';
+
+const styles = () => css`
+  .main {
     overflow: visible;
+
+    @media (max-width: ${breakpoints.tablet}px) {
+      overflow: hidden;
+    }
   }
+
   .container {
     position: relative;
 

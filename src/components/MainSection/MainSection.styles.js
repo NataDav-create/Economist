@@ -20,10 +20,9 @@ const styles = () => css`
     justify-content: flex-start;
     width: 100%;
     max-width: 1440px;
-    // padding: 0 ${p2r(140)} ${p2r(0)};
 
     @media (max-width: ${breakpoints.tablet}px) {
-      padding: 0 ${p2r(60)} ${p2r(0)};
+      padding: 0 ${p2r(30)} ${p2r(0)};
     }
 
     @media (max-width: ${breakpoints.smallTablet}px) {
@@ -39,7 +38,7 @@ const styles = () => css`
     }
 
     @media (max-width: ${breakpoints.tablet}px) {
-      max-width: 500px;
+      max-width: 100%;
     }
 
     @media (max-width: ${breakpoints.smallTablet}px) {

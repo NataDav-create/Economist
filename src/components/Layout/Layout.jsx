@@ -12,7 +12,8 @@ import styles from './Layout.styles';
 import '../../styles/normalize.css';
 import '../../fonts/fonts.css';
 
-const Layout = ({ children, title, description, image }) => {
+const Layout = ({children, title, description, image }) => {
+
   useEffect(() => {
     const [script, script2] = appendAdditionalScripts();
 
@@ -42,7 +43,7 @@ const Layout = ({ children, title, description, image }) => {
         <div className="headadv-container">
           <HeadAdv sponsors={sponsorsList} sponsoredText="" />
         </div>
-        <main> {children} </main>
+        <main className="main"> {children} </main>
       </div>
     </>
   );

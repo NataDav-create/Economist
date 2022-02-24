@@ -26,7 +26,6 @@ const styles = () => css`
   }
 
   .headadv-container {
-    //max-width: 1440px;
     max-width: 100%;
     margin: 0 auto;
   }

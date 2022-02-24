@@ -10,7 +10,6 @@ const styles = (styleText) => css`
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    // margin-top: ${p2r(128)};
     z-index: 5;
 
     @media (max-width: ${breakpoints.smallTablet}px) {

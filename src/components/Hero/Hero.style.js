@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { withPrefix } from 'gatsby-link';
 
 import { breakpoints } from '../../styles';
 import colors from '../../styles/colors';
@@ -26,7 +27,7 @@ const styles = (image) => css`
   .content-inner {
     display: flex;
     justify-content: center;
-    padding: ${p2r(52)} 0 0;
+    padding: ${p2r(52)} 0 ${p2r(50)};
 
     @media (max-width: ${breakpoints.smallTablet}px) {
       padding: ${p2r(35)} ${p2r(16)} 0;
@@ -69,7 +70,7 @@ const styles = (image) => css`
 
   .content-title {
     padding: 0;
-    margin: 0 0 ${p2r(7)};
+    margin: 0 0 ${p2r(50)};
     color: ${colors.gold};
     ${SecondaryProps};
     font-size: ${p2r(42)};
@@ -85,9 +86,10 @@ const styles = (image) => css`
   }
 
   .bg-inner {
+    margin-top: -50px;
     width: 100%;
     min-height: ${p2r(450)};
-    background-image: url(${image});
+    background-image: url(${withPrefix(image)});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

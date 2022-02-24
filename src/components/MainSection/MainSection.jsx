@@ -20,7 +20,7 @@ const MainSection = ({
   const { prevArrow, nextArrow } = assets;
 
   return (
-    <div css={styles}>
+    <div css={styles} className="mainSect">
       <div className="container">
         <div className="articles-wrapper">
           <SideMenu image={imageSideMenu.url} alt={imageSideMenu.alt} menuData={menuData} futureMenuData={futureMenuData} />
@@ -29,6 +29,13 @@ const MainSection = ({
               const Component = componentIndex[item.type];
               return <Component data={item.data} key={`${item.type}-${index}`} />;
             })}
+          </div>
+        </div>
+      </div>
+      <div className="navigation-wrap">
+        <div className="navi-container">
+          <div className="navigation-inner">
+            <div className="blank"/>
             <NavigationBlock>
               <NavigationCard
                 data={navigationPrev.navigationImage}
@@ -36,6 +43,7 @@ const MainSection = ({
                 text={navigationPrev.text}
                 styleText={'prev'}
                 direction={navigationPrev.direction}
+                link={navigationPrev.link}
                 prevImg={prevArrow}
                 mobText={mobileBtnPrev.text}
                 mobImage={mobileBtnPrev.image}
@@ -46,6 +54,7 @@ const MainSection = ({
                 text={navigationNext.text}
                 styleText={'next'}
                 direction={navigationNext.direction}
+                link={navigationNext.link}
                 nextImg={nextArrow}
                 mobText={mobileBtnNext.text}
                 mobImage={mobileBtnNext.image}

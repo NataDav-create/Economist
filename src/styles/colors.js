@@ -8,4 +8,5 @@ export default {
   beige: '#F1EfE7',
   darkBeige: '#B29E71',
   lightGold: '#E2DDCE',
+  footerGrey: '#383E42',
 };

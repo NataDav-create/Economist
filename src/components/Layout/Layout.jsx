@@ -1,3 +1,4 @@
+import FootEconSec from '@economist/fabric-components/footer/footeconsec/FootEconSec';
 import HeadAdv from '@economist/fabric-components/header/headadv/HeadAdv';
 import HeadImpact from '@economist/fabric-components/header/headimpact/HeadImpact';
 import ScrollDepth from '@economist/fabric-components/utility/ScrollDepthTracker/ScrollDepth';
@@ -12,8 +13,7 @@ import styles from './Layout.styles';
 import '../../styles/normalize.css';
 import '../../fonts/fonts.css';
 
-const Layout = ({children, title, description, image }) => {
-
+const Layout = ({ children, title, description, image }) => {
   useEffect(() => {
     const [script, script2] = appendAdditionalScripts();
 
@@ -37,13 +37,16 @@ const Layout = ({children, title, description, image }) => {
       <ScrollDepth />
       <Seo title={title} description={description} image={image} /> <PreloadStatic />
       <div css={styles}>
-        <div className="container">
+        <div>
           <HeadImpact />
         </div>
         <div className="headadv-container">
           <HeadAdv sponsors={sponsorsList} sponsoredText="" />
         </div>
         <main className="main"> {children} </main>
+        <div className="foot-container">
+          <FootEconSec />
+        </div>
       </div>
     </>
   );

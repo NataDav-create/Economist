@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { withPrefix } from 'gatsby-link';
 import React from 'react';
 
 import styles from './MobileMenu.styles';
@@ -13,7 +14,7 @@ const MobileMenu = ({isOpen, toggleOpen, menuData, futureMenuData}) => (
         <ul className={`mobile-menu-list`}>
           {menuData.map((item, index) => (
             <li key={index} className="menu-item" onClick={toggleOpen}>
-              <Link to={item.link} className="menu-link" activeClassName="active">
+              <Link to={withPrefix(item.link)} className="menu-link" activeClassName="active">
                 {item.title}
               </Link>
             </li>

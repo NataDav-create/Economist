@@ -51,12 +51,14 @@ const createPages = async ({ actions, graphql }) => {
                 title
                 text
                 direction
+                link
               }
               navigationNext {
                 navigationImage
                 title
                 text
                 direction
+                link
               }
               mobileBtnPrev {
                 text
@@ -105,12 +107,14 @@ const createPages = async ({ actions, graphql }) => {
                 title
                 text
                 direction
+                link
               }
               navigationNext {
                 navigationImage
                 title
                 text
                 direction
+                link
               }
               mobileBtnPrev {
                 text
@@ -159,12 +163,14 @@ const createPages = async ({ actions, graphql }) => {
                 title
                 text
                 direction
+                link
               }
               navigationNext {
                 navigationImage
                 title
                 text
                 direction
+                link
               }
               mobileBtnPrev {
                 text

@@ -1,10 +1,11 @@
+import { withPrefix } from 'gatsby-link';
 import React from 'react';
 
 import styles from './ImageArticle.styles';
 
 const ImageArticle = ({ data }) => (
   <div css={styles()}>
-    <img className="image-article" src={data.url} alt={data.alt} />
+    <img className="image-article" src={withPrefix(data.url)} alt={data.alt} />
   </div>
 );
 

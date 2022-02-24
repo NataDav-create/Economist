@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { withPrefix } from 'gatsby-link';
 
 import { breakpoints, colors } from '../../styles';
 import { p2r, SecondaryProps } from '../../styles/fonts';
@@ -32,7 +33,7 @@ const styles = (styleText, mobText, mobImg) => css`
         height: 100%;
         left: ${styleText === 'prev' ? '30px' : '85px'};
         top: -2%;
-        background-image: url(${mobImg});
+        background-image: url(${withPrefix(mobImg)});
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;

@@ -10,14 +10,16 @@ import styles from './Hero.style';
 const Hero = ({ data, assets, menuData, futureMenuData }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => {
-    setIsOpen(!isOpen);
-    if(!isOpen) {
-      document.body.style.height = '100vh';
-      document.body.style.overflow = 'hidden';
-      window.scroll(0, 0);
-    } else if(isOpen){
-      document.body.style.height = 'auto';
-      document.body.style.overflow = '';
+    setIsOpen((prev) => !prev);
+    if(typeof window !== 'undefined'){
+      if(!isOpen) {
+        document.body.style.height = '100vh';
+        document.body.style.overflow = 'hidden';
+        window.scroll(0, 0);
+      } else if(isOpen){
+        document.body.style.height = 'auto';
+        document.body.style.overflow = '';
+      }
     }
   };
   const { title, backgroundImage } = data;

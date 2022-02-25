@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { withPrefix } from 'gatsby-link';
 
 import { breakpoints } from '../../styles';
 import colors from '../../styles/colors';
@@ -34,7 +35,7 @@ const styles = (styleBack, styleBg, arrow, arrowWhite, arrowWh) => css`
       width: 40px;
       height: ${p2r(40)};
       content: '';
-      background-image: url(${styleBg || styleBack === 'primary' ? arrow : arrowWhite || arrowWh});
+      background-image: url(${styleBg || styleBack === 'primary' ? withPrefix(arrow) : withPrefix(arrowWhite) || withPrefix(arrowWh)});
       background-position: center;
       background-size: cover;
     }

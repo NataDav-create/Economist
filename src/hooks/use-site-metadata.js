@@ -42,12 +42,14 @@ const useSiteMetadata = () => {
                   title
                   text
                   direction
+                  link
                 }
                 navigationNext {
                   navigationImage
                   title
                   text
                   direction
+                  link
                 }
                 mobileBtnPrev {
                   text
@@ -96,12 +98,14 @@ const useSiteMetadata = () => {
                   title
                   text
                   direction
+                  link
                 }
                 navigationNext {
                   navigationImage
                   title
                   text
                   direction
+                  link
                 }
                 mobileBtnPrev {
                   text
@@ -150,12 +154,14 @@ const useSiteMetadata = () => {
                   title
                   text
                   direction
+                  link
                 }
                 navigationNext {
                   navigationImage
                   title
                   text
                   direction
+                  link
                 }
                 mobileBtnPrev {
                   text

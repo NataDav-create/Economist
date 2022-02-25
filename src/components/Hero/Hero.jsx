@@ -1,15 +1,33 @@
 import UtilSocShare from '@economist/fabric-components/utility/utilsocshare/UtilSocShare';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { colors } from '../../styles';
 import { DownloadButton } from '../DownloadButton';
+import { MobileMenu } from '../MobileMenu';
+import { MobileMenuBtn } from '../MobileMenuBtn';
 import styles from './Hero.style';
 
-const Hero = ({ data, assets }) => {
+const Hero = ({ data, assets, menuData, futureMenuData }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOpen = () => {
+    setIsOpen((prev) => !prev);
+    if(typeof window !== 'undefined'){
+      if(!isOpen) {
+        document.body.style.height = '100vh';
+        document.body.style.overflow = 'hidden';
+        window.scroll(0, 0);
+      } else if(isOpen){
+        document.body.style.height = 'auto';
+        document.body.style.overflow = '';
+      }
+    }
+  };
   const { title, backgroundImage } = data;
 
   return (
     <div css={styles(backgroundImage)}>
+      <MobileMenu isOpen={isOpen} toggleOpen={toggleOpen} menuData={menuData} futureMenuData={futureMenuData} />
+      <MobileMenuBtn toggleOpen={toggleOpen} />
       <div className="container">
         <div className="content-inner">
           <div className="social-inner">

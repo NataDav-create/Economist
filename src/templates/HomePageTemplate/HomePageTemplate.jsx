@@ -17,7 +17,7 @@ const HomePageTemplate = ({ pageContext: { PageData, CommonInfo } }) => {
     <Layout title={PageData.seo.title} description={PageData.seo.description} image={PageData.seo.image}>
       <div css={styles}>
         <Wrapper maxWidth={'1440px'} width={'100%'} mobileWidth={'90%'}>
-          <Hero data={hero} assets={assets} />
+          <Hero data={hero} assets={assets} menuData={menuData} futureMenuData={futureMenuData} />
           <MainSection
             mobileBtnPrev={mobileBtnPrev}
             mobileBtnNext={mobileBtnNext}

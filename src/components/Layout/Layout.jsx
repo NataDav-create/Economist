@@ -1,3 +1,4 @@
+import FootEconSec from '@economist/fabric-components/footer/footeconsec/FootEconSec';
 import HeadAdv from '@economist/fabric-components/header/headadv/HeadAdv';
 import HeadImpact from '@economist/fabric-components/header/headimpact/HeadImpact';
 import ScrollDepth from '@economist/fabric-components/utility/ScrollDepthTracker/ScrollDepth';
@@ -36,13 +37,16 @@ const Layout = ({ children, title, description, image }) => {
       <ScrollDepth />
       <Seo title={title} description={description} image={image} /> <PreloadStatic />
       <div css={styles}>
-        <div className="container">
+        <div>
           <HeadImpact />
         </div>
         <div className="headadv-container">
           <HeadAdv sponsors={sponsorsList} sponsoredText="" />
         </div>
-        <main> {children} </main>
+        <main className="main"> {children} </main>
+        <div className="foot-container">
+          <FootEconSec />
+        </div>
       </div>
     </>
   );
